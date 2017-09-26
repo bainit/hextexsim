@@ -1,13 +1,13 @@
-Hextexsim is a software for texture evolution simulations in deformed metals according to Taylor model.
+Hextexsim is a piece of software for texture evolution simulations in deformed metals according to the Taylor model.
 
-LICENSE
-	The software is distributed under MIT License. You can find the license in LICENSE file.
+LICENCE
+	The software is distributed under the MIT Licence. You can find the licence in the LICENCE file.
 
 REQUIREMENTS
 	Recommended literature:
 	1).
 	P. Van Houtte
-	"A Comprehensive Mathematical Formulation of an Extended Taylor-Bishop-Hill Model Featuring Relaxed Constraints,the Renouard-Wintenberger Theory and a Strain Rate Sensitivity Mode"l
+	"A Comprehensive Mathematical Formulation of an Extended Taylor-Bishop-Hill Model Featuring Relaxed Constraints, the Renouard-Wintenberger Theory and a Strain Rate Sensitivity Model"
 	Textures and Microstructures, 1988, Vols. 8 & 9, pp. 313-350
 	
 	2).
@@ -15,12 +15,12 @@ REQUIREMENTS
 	"Crystal-Plasticity Fundamentals"
 	ASM Handbook Volume 22A: Fundamentals of Modeling for Metals Processing
 	
-	Hextexsim needs:
+	Hextexsim requirements:
 	1). Linux system
 	2). gcc in version 4.9 supporting openmp
 	3). gsl library in version 1.16
 
-INSTALATION
+INSTALLATION
 	To build, use:
 
 	./configure
@@ -36,16 +36,16 @@ USAGE
 	hextexsime <settings_file> <grains_file> <slip_systems_file> <hardening_file> <output_dir>
 
 DESCRIPTION OF INPUT FILES
-	Settings file contains a process information. 
-	Grains file is .sor file (which is supported by many softwares for texture analysis e.g. LaboTex or MTEX).
-	Slip systems file contains information about all slip systems in a particular cell structure.
-	Hardening file contains information about hardening parameters according to the model used. So far exponential model is used, but in future some other models may be introduced.
+	The settings_file contains process information. 
+	The grains_file is the .sor file (which is supported by many software programs for texture analysis e.g. LaboTex or MTEX).
+	The slip_systems_file contains information about all slip systems in a particular cell structure.
+	The hardening_file contains information about the hardening parameters according to the model used. So far the exponential model has been used thus far, but in the future some other models may be introduced.
 	output_dir is a directory where hextexsim places the results.
-	For detailed description of input files please read example-files/DESCRIPTION.
+	For a detailed description of the input files, please read example-files/DESCRIPTION.
 
 EXAMPLE FILES
-	In folder example-files you can find example of input files for fcc metals.
+	In the folder example-files, you can find examples of input files for fcc metals.
 
 FURTHER PROCESSING
-	Into <output_dir> are placed the results of calculations. The texture_result.csv file should be processed by a software for texture analysis e.g. LaboTex or MTEX. The file is in .sor format. In columns angles phi1, PHI, and phi2 in radians are stored. The weight of each orientation is 1.
+	The results of the calculation are placed into the <output_dir>. The texture_result.csv file should be processed by a software program for texture analysis e.g. LaboTex or MTEX. The file is in .sor format. Euler angles phi1, PHI, and phi2 in radians are stored in columns. The weight of each orientation is equal to 1.
 

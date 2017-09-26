@@ -1,21 +1,21 @@
-Settings file
-	First line is a number of steps in deformation process
-	Second line is a deformation step
-	In lLines 4-6 is a deformation strain tensor. In the given example there is strain tensor for rolling
-	In lines 8-10 is constrain tensor K1
-	Lines 12-14 is a constrain tensor K2
+settings_file (settings)
+	The first line contains a number of steps in the deformation process.
+	The second line contains a deformation step.
+	Lines 4-6 contain a deformation strain tensor. In the given example there is a strain tensor for rolling.
+	Lines 8-10 contain the constraints tensor K1.
+	Lines 12-14 contain the constraints tensor K2.
 
-Grains_file
-	In this file are stored Euler angles in radians for each grain
-	First column is phi1, second PHI and third phi2
+grains_file (random_texture_very_long_rad.csv)
+	In this file, Euler angles are stored in radians for each grain.
+	The first column is phi1, the second is PHI and the third is phi2.
 
-Slip systems file
-	This file contains label, slip plane and slip direction (in orthonormal and orthogonal space), and critical resolved shear stress (crss) of each slip system/twinning mode which takes part in deformation of particular cell structure.
-	First column is slip system label
-	In columns 3-5, hkl of a given slip plane
-	In columns 7-9, uvw of a given slip direction
-	In column 11 crss in MPa of a given slip system
+slip_systems_file (fcc_metals)
+	This file contains the label, slip plane and slip direction (in orthonormal and orthogonal space), and critical resolved shear stress (crss) of each slip system/twinning mode which takes part in the deformation of a particular cell structure.
+	The first column contains a slip system label.
+	Columns 3-5 contain the hkl of a given slip plane.
+	Columns 7-9 contain the uvw of a given slip direction.
+	Column 11 contains the crss in MPa of a given slip system.
 
-Hardening file
-	In this file a matrix describing latent hardening factors between every slip system is stored. The order of slip systems shoud be the same like in slip system file. Last line provides hardening parameters according to equation
+hardening_file (fcc_hardening)
+	In this file a matrix describing the latent hardening factors between every slip system is stored. The order of slip systems should be the same like in the slip system file. The last line provides hardening parameters according to the following equation:
 	crss(i) = crss(i-1)/crss * f1 * exp(f2) * pow(crss,f3)
